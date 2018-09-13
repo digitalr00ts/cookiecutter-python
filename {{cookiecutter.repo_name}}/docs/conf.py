@@ -12,16 +12,24 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
+{% if cookiecutter.project_type.capitalize() == 'Documentation' -%}
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
+{% else %}
+import os
+import sys
+sys.path.insert(0, os.path.abspath('..'))
+
+import {{ cookiecutter.project_slug }}
+{% endif %}
 
 
 # -- Project information -----------------------------------------------------
 
-project = 'Test docs'
-copyright = '2018, digitalr00ts'
-author = 'digitalr00ts'
+project = u'{{ cookiecutter.project_name }}'
+copyright = u"{% now 'local', '%Y' %}, {{ cookiecutter.full_name }}"
+author = u"{{ cookiecutter.full_name }}"
 
 # The short X.Y version
 version = '0.0'
@@ -105,7 +113,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Testdocsdoc'
+htmlhelp_basename = '{{ cookiecutter.project_slug }}doc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -132,8 +140,9 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'Testdocs.tex', 'Test docs Documentation',
-     'digitalr00ts', 'manual'),
+    (master_doc, '{{ cookiecutter.project_slug }}.tex',
+     u'{{ cookiecutter.project_name }} Documentation',
+     u'{{ cookiecutter.full_name }}', 'manual'),
 ]
 
 
@@ -142,7 +151,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'testdocs', 'Test docs Documentation',
+    (master_doc, '{{ cookiecutter.project_slug }}',
+     u'{{ cookiecutter.project_name }} Documentation',
      [author], 1)
 ]
 
@@ -153,8 +163,11 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'Testdocs', 'Test docs Documentation',
-     author, 'Testdocs', 'One line description of project.',
+    (master_doc, '{{ cookiecutter.project_slug }}',
+     u'{{ cookiecutter.project_name }} Documentation',
+     author,
+     '{{ cookiecutter.project_slug }}',
+     'One line description of project.',
      'Miscellaneous'),
 ]
 
