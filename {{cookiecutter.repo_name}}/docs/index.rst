@@ -1,8 +1,3 @@
-Test docs documentation master file, created by
-   sphinx-quickstart on Thu Sep  6 22:18:05 2018.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 Welcome to Test docs's documentation!
 =====================================
 
@@ -10,6 +5,8 @@ Welcome to Test docs's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   readme
+   authors
 
 Indices and tables
 ==================
