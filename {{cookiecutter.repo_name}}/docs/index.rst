@@ -1,4 +1,4 @@
-Welcome to Test docs's documentation!
+Welcome to {{ cookiecutter.project_name }}'s documentation!
 =====================================
 
 .. toctree::
