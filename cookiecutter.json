@@ -1,11 +1,12 @@
 {
-    "full_name":    "Carlos Meza",
-    "email":        "carlos@digitalr00ts.com",
-    "project_name": "project_name",
-    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
-    "project_type": "Documentation",
-    "repo_name":    "{{ cookiecutter.project_name|replace(' ', '_') }}",
-    "description":  "Documentation",
-    "domain_name":  "digitalr00ts.com",
-    "version":      "0.1.0"
+    "full_name":        "Carlos Meza",
+    "email":            "carlos@digitalr00ts.com",
+    "github_username" : "digitalr00ts",
+    "project_name":     "project_name",
+    "project_slug":     "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+    "project_type":     "Documentation",
+    "repo_name":        "{{ cookiecutter.project_name|replace(' ', '_') }}",
+    "description":      "Documentation",
+    "domain_name":      "digitalr00ts.com",
+    "version":          "0.1.0"
 }
