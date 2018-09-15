@@ -60,7 +60,10 @@ templates_path = ['_templates']
 # You can specify multiple suffix as a list of string:
 #
 # source_suffix = ['.rst', '.md']
-source_suffix = '.rst'
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown',
+}
 
 # The master toctree document.
 master_doc = 'index'
@@ -109,12 +112,14 @@ html_static_path = ['_static']
 #
 # html_sidebars = {}
 
-
-# -- Options for HTMLHelp output ---------------------------------------------
-
 # Output file base name for HTML help builder.
 htmlhelp_basename = '{{ cookiecutter.project_slug }}doc'
 
+
+# -- Options for HTMLHelp output ---------------------------------------------
+
+# If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
+html_show_sphinx = False
 
 # -- Options for LaTeX output ------------------------------------------------
 
