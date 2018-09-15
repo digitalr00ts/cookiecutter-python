@@ -6,7 +6,10 @@ Welcome to Test docs's documentation!
    :caption: Contents:
 
    readme
+   usage
+   contributing
    authors
+   history
 
 Indices and tables
 ==================
