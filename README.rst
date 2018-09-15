@@ -9,13 +9,18 @@ A Cookiecutter_ template for Sphinx.
 Usage
 ------
 
-Install cookiecutter::
 
-    $ pip install cookiecutter
+Quickstart
+----------
 
-Run it against this repo::
+Install the latest Cookiecutter if you haven't installed it yet (this requires
+Cookiecutter 1.6.0 or higher)::
 
-    $ cookiecutter 
+    pip install -U cookiecutter
+
+Generate a Python package project::
+
+    cookiecutter https://github.com/digitalr00ts/cookiecutter-python.git
 
 
 To Do
