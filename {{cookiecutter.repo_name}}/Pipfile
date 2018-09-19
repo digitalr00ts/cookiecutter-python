@@ -4,14 +4,14 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+logging = "*"
 
 [dev-packages]
 black = "*"
 pylint = "*"
-
-[doc-packages]
-Sphinx = "*"
-sphinx_rtd_theme = "*"
+pytest = "*"
+tox = "*"
 
 [requires]
-
+# Empty because pipenv will not support multiple python version here.
+# see https://github.com/pypa/pipenv/issues/1050
