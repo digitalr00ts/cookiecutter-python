@@ -4,7 +4,7 @@
     "project_name":     "project_name",
     "project_slug":     "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
     "project_type":     "Documentation",
-    "repo_name":        "{{ cookiecutter.project_name|replace(' ', '_') }}",
+    "repo_name":        "{{ cookiecutter.project_name|replace(' ', '-') }}",
     "github_username" : "digitalr00ts",
     "description":      "Documentation",
     "domain_name":      "digitalr00ts.com",
