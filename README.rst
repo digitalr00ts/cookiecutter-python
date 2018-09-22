@@ -22,6 +22,47 @@ Generate a Python package project::
 
     cookiecutter https://github.com/digitalr00ts/cookiecutter-python.git
 
+Features
+--------
+
+- tox
+- editorconfig
+- gitignore
+  - python
+  - vim
+  - vscode
+  - InteliJ
+- License (LGPL)
+- Python Packaging
+- Readme
+- Documentation
+- Pipfile
+- gitattributes
+- Black formater
+- precommit
+
+Coming Soon
+^^^^^^^^^^^
+- VCS Templates
+  - Github
+  - Gitlab
+  - Gitea/Gogs ???
+- module cli support
+- exceptions
+- CI/CD
+  - Travis
+  - Jenkins
+  - Gitlab CI
+- License
+- logging
+- testing
+  - bandit
+  - pylint
+  - hypothosis
+  - mock?
+  - pytest
+
+
 
 To Do
 -----
