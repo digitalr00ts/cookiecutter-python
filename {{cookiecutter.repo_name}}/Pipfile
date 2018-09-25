@@ -4,7 +4,6 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-logging = "*"
 
 [dev-packages]
 bandit = "*"
@@ -13,6 +12,7 @@ pre-commit = "*"
 pylint = "*"
 pytest = "*"
 tox = "*"
+{{ cookiecutter.project_slug }} = {path = ".", editable = true}
 
 [requires]
 # Empty because pipenv will not support multiple python version here.
