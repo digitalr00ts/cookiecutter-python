@@ -25,7 +25,7 @@ setup(
         "Natural Language :: English",
         "Programming Language :: Python :: 3.7",
     ],
-    description="{{ cookiecutter.project_short_description }}",
+    description="{{ cookiecutter.description }}",
     entry_points={
         "console_scripts": [
             "{{ cookiecutter.project_slug }} = {{ cookiecutter.project_slug }}.__main__:main"
