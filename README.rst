@@ -40,6 +40,9 @@ Features
 - gitattributes
 - Black formater
 - precommit
+- testing
+  - pylint
+  - bandit
 
 Coming Soon
 ^^^^^^^^^^^
@@ -57,8 +60,6 @@ Coming Soon
 - logging
 - pbr
 - testing
-  - bandit
-  - pylint
   - hypothosis
   - mock?
   - pytest
