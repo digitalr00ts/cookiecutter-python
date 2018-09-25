@@ -55,12 +55,14 @@ Coming Soon
   - Gitlab CI
 - License
 - logging
+- pbr
 - testing
   - bandit
   - pylint
   - hypothosis
   - mock?
   - pytest
+  - coverage
 
 
 
