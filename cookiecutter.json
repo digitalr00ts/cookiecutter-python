@@ -8,6 +8,6 @@
     "github_username" : "digitalr00ts",
     "description":      "Documentation",
     "domain_name":      "digitalr00ts.com",
-    "version":          "0.1.0",
+    "version":          "0.1a0",
     "python_version":   ["3.7", "3.8"]
 }
