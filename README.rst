@@ -1,7 +1,7 @@
 cookiecutter-sphinx-docs
 ===================
 
-A Cookiecutter_ template for Sphinx.
+A Cookiecutter_ template for Python 3.6+ projects
 
 .. _cookiecutter: https://github.com/audreyr/cookiecutter
 
@@ -42,6 +42,7 @@ Features
 - precommit
 - testing
   - pylint
+  - pytest
   - bandit
 
 Coming Soon
@@ -62,7 +63,6 @@ Coming Soon
 - testing
   - hypothosis
   - mock?
-  - pytest
   - coverage
 
 
