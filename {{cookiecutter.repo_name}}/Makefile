@@ -53,13 +53,14 @@ clean-test: ## remove test and coverage artifacts
 	rm -fr .pytest_cache
 
 lint: ## check style with flake8
-	flake8 {{ cookiecutter.project_slug }} tests
+	pipenv run pylint {{ cookiecutter.project_slug }}
+	black --check {{ cookiecutter.project_slug }}
 
 test: ## run tests quickly with the default Python
-	py.test
+	pipenv run pytest
 
 test-all: ## run tests on every Python version with tox
-	tox
+	pipenv run tox
 
 coverage: ## check code coverage quickly with the default Python
 	coverage run --source {{ cookiecutter.project_slug }} -m pytest
