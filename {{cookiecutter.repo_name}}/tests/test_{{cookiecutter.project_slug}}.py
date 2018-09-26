@@ -3,7 +3,8 @@
 
 """Tests for `{{ cookiecutter.project_slug }}` package."""
 
-from {{ cookiecutter.project_slug }} import {{ cookiecutter.project_slug }}
+import {{ cookiecutter.project_slug }}
+import unittest
 
 
 class Test{{ cookiecutter.project_slug|title }}(unittest.TestCase):
