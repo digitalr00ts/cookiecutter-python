@@ -18,7 +18,7 @@ test_requirements = ["pytest"]
 
 setup(
     author={{ cookiecutter.project_slug }}.__author__,
-    author_email={{ cookiecutter.project_slug }}.__email,
+    author_email={{ cookiecutter.project_slug }}.__email__,
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
         "Intended Audience :: Developers",
