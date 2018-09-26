@@ -4,6 +4,7 @@
 """The setup script."""
 
 from setuptools import setup, find_packages
+import {{ cookiecutter.project_slug }}
 
 with open("README.rst") as readme_file:
     readme = readme_file.read()
@@ -11,13 +12,13 @@ with open("README.rst") as readme_file:
 with open("HISTORY.rst") as history_file:
     history = history_file.read()
 
+requirements = []
 setup_requirements = ["pytest-runner"]
-
 test_requirements = ["pytest"]
 
 setup(
-    author="{{ cookiecutter.full_name.replace('\"', '\\\"') }}",
-    author_email="{{ cookiecutter.email }}",
+    author={{ cookiecutter.project_slug }}.__author__,
+    author_email={{ cookiecutter.project_slug }}.__email,
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
         "Intended Audience :: Developers",
@@ -42,6 +43,6 @@ setup(
     test_suite="tests",
     tests_require=test_requirements,
     url="https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}",
-    version="{{ cookiecutter.project_slug }}.__version__",
+    version={{ cookiecutter.project_slug }}.__version__,
     zip_safe=False,
 )
