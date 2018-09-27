@@ -44,6 +44,7 @@ def _config_logging(
         filehandler.setFormatter(log_formatter)
         _LOGGER.addHandler(filehandler)
 
+
 import logging
 
 _LOGGER = logging.getLogger(__name__)
