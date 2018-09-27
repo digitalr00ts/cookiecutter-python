@@ -1,21 +1,22 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+# pylint: disable=invalid-name
 
 """The setup script."""
 
-from setuptools import setup, find_packages
 import os
+from setuptools import setup, find_packages
 
 
 here = os.path.abspath(os.path.dirname(__file__))
 
 about = {}
-with open(os.path.join(here, "requests", "__version__.py"), "r", "utf-8") as f:
-    exec(f.read(), about)
+with open(os.path.join(here, "{{ cookiecutter.project_slug }}", "__version__.py"), "r") as f:
+    exec(f.read(), about)  # pylint: disable=exec-used
 
-with open("README.md", "r", "utf-8") as f:
+with open("README.md", "r") as f:
     readme = f.read()
-with open("HISTORY.md", "r", "utf-8") as f:
+with open("HISTORY.md", "r") as f:
     history = f.read()
 
 requirements = []
