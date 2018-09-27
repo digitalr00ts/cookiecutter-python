@@ -60,3 +60,6 @@ Session.vim
 tags
 # Persistent undo
 [._]*.un~
+
+# Default logfile
+{{cookiecutter.project_slug}}.log
