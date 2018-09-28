@@ -53,8 +53,8 @@ clean-test: ## remove test and coverage artifacts
 	rm -fr .pytest_cache
 
 lint: ## check style with flake8
-	pipenv run pylint {{ cookiecutter.project_slug }}
-	black --check {{ cookiecutter.project_slug }}
+	pipenv run pylint {{ cookiecutter.project_slug }} tests setup.py
+	pipenv black --check --py36 {{ cookiecutter.project_slug }} tests setup.py
 
 test: ## run tests quickly with the default Python
 	pipenv run pytest
@@ -63,10 +63,10 @@ test-all: ## run tests on every Python version with tox
 	pipenv run tox
 
 coverage: ## check code coverage quickly with the default Python
-	coverage run --source {{ cookiecutter.project_slug }} -m pytest
-	coverage report -m
-	coverage html
-	$(BROWSER) htmlcov/index.html
+	pipenv run coverage run --source {{ cookiecutter.project_slug }} -m pytest
+	pipenv run coverage report -m
+	pipenv run coverage html
+	pipenv run $(BROWSER) htmlcov/index.html
 
 docs: ## generate Sphinx HTML documentation, including API docs
 	rm -f docs/{{ cookiecutter.project_slug }}.rst
