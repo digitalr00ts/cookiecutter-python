@@ -12,4 +12,5 @@ from .__version__ import (
     __license__,
     __copyright__,
 )
-from . import *  # pylint: disable=wildcard-import
+
+logging.getLogger(__name__).addHandler(logging.NullHandler())

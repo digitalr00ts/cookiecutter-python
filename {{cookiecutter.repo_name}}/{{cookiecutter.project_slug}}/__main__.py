@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
 
 """Main module."""
-from typing import List, Optional, Any, Union
+from typing import Optional
 import logging
+import logging.handlers
+import os
 import sys
 
-_LOGGER = logging.getLogger(__package__)
+_logger: logging.Logger = logging.getLogger(__name__)
 
 
 def _config_logging(
@@ -26,28 +28,35 @@ def _config_logging(
         Name of log file. By default there is not fileHandler for logging
     """
 
-    if console_loglevel is None:
-        console_loglevel = logging.WARNING
-    log_format: str = "%(levelname)s: %(message)s"
+    # root Logger lvl must be the lowest for child handlers to use
+    # an lvl equal to or greater than that of the parent
+    # see https://docs.python.org/3/library/logging.html#logging.Logger.setLevel
+    _logger.setLevel(logging.DEBUG)
 
-    logging.basicConfig(stream=sys.stderr, level=console_loglevel, format=log_format)
+    if console_loglevel is None:
+        console_loglevel = logging.INFO
+
+    log_formatter: logging.Formatter = logging.Formatter("%(levelname)s: %(message)s")
+    console_handler: logging.StreamHandler = logging.StreamHandler(sys.stderr)
+    console_handler.setFormatter(log_formatter)
+    console_handler.setLevel(console_loglevel)
+    _logger.addHandler(console_handler)
 
     if log_file:
-        log_formatter: logging.Formatter = logging.Formatter(
+        if not file_loglevel:
+            file_loglevel = logging.DEBUG
+        log_formatter = logging.Formatter(
             "[%(asctime)s:%(levelname)-7s:%(name)s.%(module)s:%(lineno)d] %(message)s"
         )
-        filehandler: logging.FileHandler = logging.FileHandler(log_file)
-        if not file_loglevel:
-            filehandler.setLevel(logging.DEBUG)
+        if os.name == "posix":
+            file_handler: logging.handlers.WatchedFileHandler = logging.handlers.WatchedFileHandler(
+                log_file
+            )
         else:
-            filehandler.setLevel(file_loglevel)
-        filehandler.setFormatter(log_formatter)
-        _LOGGER.addHandler(filehandler)
-
-
-import logging
-
-_LOGGER = logging.getLogger(__name__)
+            file_handler: logging.FileHandler = logging.FileHandler(log_file)
+        file_handler.setFormatter(log_formatter)
+        file_handler.setLevel(file_loglevel)
+        _logger.addHandler(file_handler)
 
 
 def main():
