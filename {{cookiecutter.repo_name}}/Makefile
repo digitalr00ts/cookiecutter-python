@@ -1,4 +1,4 @@
-.PHONY: clean clean-test clean-pyc clean-build docs help
+.PHONY: init clean clean-test clean-pyc clean-build docs help
 .NOTPARALLEL:
 .DEFAULT_GOAL := help
 SHELL := /bin/bash
@@ -31,6 +31,11 @@ BROWSER := python -c "$$BROWSER_PYSCRIPT"
 help:
 	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
 
+init: ## create local virtualenv w/ packages for dev
+	PIPENV_VENV_IN_PROJECT=1 pipenv install --dev
+	pipenv run pre-commit
+	@echo -e '\nTo enter the virtualenv run:\n    pipenv shell --fancy'
+
 clean: clean-build clean-pyc clean-test ## remove all build, test, coverage and Python artifacts
 
 clean-build: ## remove build artifacts
@@ -54,7 +59,7 @@ clean-test: ## remove test and coverage artifacts
 
 lint: ## check style with flake8
 	pipenv run pylint {{ cookiecutter.project_slug }} tests setup.py
-	pipenv black --check --py36 {{ cookiecutter.project_slug }} tests setup.py
+	pipenv run black --check --py36 {{ cookiecutter.project_slug }} tests setup.py
 
 test: ## run tests quickly with the default Python
 	pipenv run pytest
@@ -71,20 +76,20 @@ coverage: ## check code coverage quickly with the default Python
 docs: ## generate Sphinx HTML documentation, including API docs
 	rm -f docs/{{ cookiecutter.project_slug }}.rst
 	rm -f docs/modules.rst
-	sphinx-apidoc -o docs/ {{ cookiecutter.project_slug }}
-	$(MAKE) -C docs clean
-	$(MAKE) -C docs html
+	pipenv run sphinx-apidoc -o docs/ {{ cookiecutter.project_slug }}
+	pipenv run $(MAKE) -C docs clean
+	pipenv run $(MAKE) -C docs html
 	$(BROWSER) docs/_build/html/index.html
 
 # servedocs: docs ## compile the docs watching for changes
 	watchmedo shell-command -p '*.rst' -c '$(MAKE) -C docs html' -R -D .
 
 release: dist ## package and upload a release
-	twine upload dist/*
+	pipenv run twine upload dist/*
 
 dist: clean ## builds source and wheel package
-	python setup.py sdist
-	python setup.py bdist_wheel
+	pipenv run python setup.py sdist
+	pipenv run python setup.py bdist_wheel
 	ls -l dist
 
 install: clean ## install the package to the active Python's site-packages
