@@ -6,13 +6,15 @@ name = "pypi"
 [packages]
 
 [dev-packages]
-bandit = "*"
-black = "*"
-coverage = "*"
-pre-commit = "*"
-pylint = "*"
-pytest = "*"
-tox = "*"
+bandit = {version="*", index="pypi"}
+black = {version="*", index="pypi"}
+coverage = {version="*", index="pypi"}
+pre-commit = {version="*", index="pypi"}
+pylint = {version="*", index="pypi"}
+pytest = {version="*", index="pypi"}
+Sphinx = {version="*", index="pypi"}
+sphinx_rtd_theme = {version="*", index="pypi"}
+tox = {version="*", index="pypi"}
 {{ cookiecutter.project_slug }} = {path = ".", editable = true}
 
 [requires]
