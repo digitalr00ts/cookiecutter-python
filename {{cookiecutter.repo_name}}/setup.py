@@ -14,9 +14,9 @@ about = {}
 with open(os.path.join(here, "{{ cookiecutter.project_slug }}", "__version__.py"), "r") as f:
     exec(f.read(), about)  # pylint: disable=exec-used
 
-with open("README.md", "r") as f:
+with open("README.rst", "r") as f:
     readme = f.read()
-with open("HISTORY.md", "r") as f:
+with open("HISTORY.rst", "r") as f:
     history = f.read()
 
 requirements = []
