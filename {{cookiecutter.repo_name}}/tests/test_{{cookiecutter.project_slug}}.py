@@ -1,10 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+# pylint: disable=no-self-use, invalid-name
 
 """Tests for `{{ cookiecutter.project_slug }}` package."""
 
-import {{ cookiecutter.project_slug }}
 import unittest
+
+import pytest
+
+import {{ cookiecutter.project_slug }}
 
 
 class Test{{ cookiecutter.project_slug|title }}(unittest.TestCase):
