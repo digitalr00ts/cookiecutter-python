@@ -1,4 +1,4 @@
-cookiecutter-sphinx-docs
+cookiecutter-python
 ===================
 
 A Cookiecutter_ template for Python 3.6+ projects
@@ -28,10 +28,12 @@ Features
 - tox
 - editorconfig
 - gitignore
+
   - python
   - vim
   - vscode
   - InteliJ
+
 - License (LGPL)
 - Python Packaging
 - Readme
@@ -41,29 +43,38 @@ Features
 - Black formater
 - precommit
 - testing
-  - pylint
-  - pytest
-  - bandit
+
+   - pylint
+   - pytest
+   - bandit
+
+- logging
 
 Coming Soon
 ^^^^^^^^^^^
 - VCS Templates
-  - Github
-  - Gitlab
-  - Gitea/Gogs ???
+
+   - Github
+   - Gitlab
+   - Gitea/Gogs ???
+
 - module cli support
 - exceptions
 - CI/CD
-  - Travis
-  - Jenkins
-  - Gitlab CI
-- License
-- logging
+
+   - Travis
+   - Jenkins
+   - Gitlab CI
+
+- License Options
 - pbr
 - testing
-  - hypothosis
-  - mock?
-  - coverage
+
+   - hypothosis
+   - mock?
+   - coverage
+
+- lint default cookiecutter template (testing)
 
 
 
@@ -72,11 +83,13 @@ To Do
 
 - Fix license for this cookiecutter
 - Add license options to template
-  - Creative Commons Attribution
-  - Creative Commons Zero
-  - Creative Commons Attribution Share Alike
-  - GNU Free Documentation License (FDL)
-  - Public Documentation License (PDL)
-  - FreeBSD Documentation License
-  - Open Publication License
+
+   - Creative Commons Attribution
+   - Creative Commons Zero
+   - Creative Commons Attribution Share Alike
+   - GNU Free Documentation License (FDL)
+   - Public Documentation License (PDL)
+   - FreeBSD Documentation License
+   - Open Publication License
+
 - add ability to select built-in theme
