@@ -1,9 +1,9 @@
 {
     "full_name":        "Carlos Meza",
     "email":            "carlos@digitalr00ts.com",
-    "project_name":     "Project Name",
+    "project_name":     "Python Project",
     "project_slug":     "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
-    "project_type":     "Documentation",
+    "project_type":     ["Module", "Documentation"],
     "repo_name":        "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
     "github_username" : "digitalr00ts",
     "description":      "Documentation",
