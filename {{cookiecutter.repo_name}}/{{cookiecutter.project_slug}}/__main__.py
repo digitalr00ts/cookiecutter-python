@@ -61,7 +61,8 @@ def _config_logging(
 
 def main():
     """Main entry point"""
-    _config_logging(log_file=".".join([__package__, "log"]))
+    _config_logging(log_file=f"{__package__}.log")
+    _logger.info("Arguments received: %s", sys.argv[1:])
 
 
 if __name__ == "__main__":
