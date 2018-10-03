@@ -1,5 +1,7 @@
 .PHONY: init clean clean-test clean-pyc clean-build docs help
 .NOTPARALLEL:
+.POSIX:
+.ONESHELL:
 .DEFAULT_GOAL := help
 SHELL := /bin/bash
 
