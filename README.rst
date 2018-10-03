@@ -44,35 +44,36 @@ Features
 - precommit
 - testing
 
-   - pylint
-   - pytest
-   - bandit
+  - pylint
+  - pytest
+  - bandit
 
 - logging
+- cli module support
 
 Coming Soon
 ^^^^^^^^^^^
 - VCS Templates
 
-   - Github
-   - Gitlab
-   - Gitea/Gogs ???
+  - Github
+  - Gitlab
+  - Gitea/Gogs ???
 
-- module cli support
 - exceptions
 - CI/CD
 
-   - Travis
-   - Jenkins
-   - Gitlab CI
+  - Travis
+  - Jenkins
+  - Gitlab CI
 
 - License Options
 - pbr
 - testing
 
-   - hypothosis
-   - mock?
-   - coverage
+  - hypothosis
+  - mock?
+  - coverage
+  - pytest-bdd
 
 - lint default cookiecutter template (testing)
 
@@ -81,7 +82,6 @@ Coming Soon
 To Do
 -----
 
-- Fix license for this cookiecutter
 - Add license options to template
 
    - Creative Commons Attribution
@@ -92,4 +92,4 @@ To Do
    - FreeBSD Documentation License
    - Open Publication License
 
-- add ability to select built-in theme
+- add ability to select built-in theme for docs
