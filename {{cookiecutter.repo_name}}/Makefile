@@ -64,7 +64,7 @@ lint: ## check style with flake8
 	pipenv run black --check --py36 {{ cookiecutter.project_slug }} tests setup.py
 
 test: ## run tests quickly with the default Python
-	pipenv run pytest
+	pipenv run pytest -v
 
 test-all: ## run tests on every Python version with tox
 	pipenv run tox
