@@ -7,6 +7,7 @@ name = "pypi"
 
 [dev-packages]
 bandit = {version="*", index="pypi"}
+better_exceptions = {version="*", index="pypi"}
 black = {version="*", index="pypi"}
 coverage = {version="*", index="pypi"}
 pre-commit = {version="*", index="pypi"}

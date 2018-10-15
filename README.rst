@@ -50,6 +50,7 @@ Features
 
 - logging
 - cli module support
+- includes, Better Exceptions
 
 Coming Soon
 ^^^^^^^^^^^
