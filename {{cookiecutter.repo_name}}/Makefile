@@ -67,7 +67,7 @@ test: ## run tests quickly with the default Python
 	pipenv run pytest -v
 
 test-all: ## run tests on every Python version with tox
-	pipenv run tox
+	BETTER_EXCEPTIONS=1 pipenv run tox
 
 coverage: ## check code coverage quickly with the default Python
 	pipenv run coverage run --source {{ cookiecutter.project_slug }} -m pytest

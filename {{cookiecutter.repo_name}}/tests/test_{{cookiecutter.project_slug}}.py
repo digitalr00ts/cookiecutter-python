@@ -7,10 +7,12 @@
 import logging
 import unittest
 
+import better_exceptions
 import {{ cookiecutter.project_slug }}
 
 
 logging.basicConfig(level=logging.DEBUG)
+better_exceptions.hook()
 
 
 class Test{{ cookiecutter.project_slug|title }}(unittest.TestCase):
