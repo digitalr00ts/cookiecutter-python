@@ -10,8 +10,7 @@ import unittest
 import {{ cookiecutter.project_slug }}
 
 
-_logger: logging.Logger = logging.getLogger(__name__)
-_logger.setLevel(logging.DEBUG)
+logging.basicConfig(level=logging.DEBUG)
 
 
 class Test{{ cookiecutter.project_slug|title }}(unittest.TestCase):
