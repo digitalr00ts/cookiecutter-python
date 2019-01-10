@@ -1,0 +1,8 @@
+* text=auto
+.* text eol=LF
+*.rst text eol=LF
+*.txt text eol=LF
+*.md text eol=LF
+*.json text eol=LF
+*.yml text eol=LF
+*.yaml text eol=LF

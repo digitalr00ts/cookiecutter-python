@@ -1,0 +1,8 @@
+# MANIFEST.in is still required because setuptools.setup(package_data=dict()) is a lie.
+# http://blog.codekills.net/2011/07/15/lies,-more-lies-and-python-packaging-documentation-on--package_data-/
+include *.rst
+include COPYING*
+include LICENSE
+include Pipfile*
+include pyproject.toml
+recursive-include tests *
