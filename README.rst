@@ -44,6 +44,7 @@ Features
 - Pipfile
 - gitattributes
 - Black formater
+- Travis
 
 
 To Do
@@ -71,7 +72,6 @@ To Do
 - exceptions
 - CI/CD
 
-  - Travis
   - Jenkins
   - Gitlab CI
 
