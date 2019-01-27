@@ -88,3 +88,5 @@ To Do
 - cli module support
 - precommit
 - testing
+- coverall
+- push to pypi
