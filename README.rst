@@ -30,6 +30,7 @@ Features
 - pylint
 - pytest
 - bandit
+- coverage
 - editorconfig
 - gitignore
 
@@ -45,6 +46,7 @@ Features
 - gitattributes
 - Black formater
 - Travis
+- versioning from git tag
 
 
 To Do
@@ -61,7 +63,6 @@ To Do
    - Open Publication License
 
 - add ability to select built-in theme for docs
-- https://github.com/pypa/setuptools_scm
 - Documentation
 - VCS Templates
 
@@ -79,7 +80,6 @@ To Do
 - testing
 
   - hypothosis
-  - coverage
   - pytest-bdd
 
 - lint default cookiecutter template (testing)
