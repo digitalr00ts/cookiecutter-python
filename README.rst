@@ -47,6 +47,8 @@ Features
 - Black formater
 - Travis
 - versioning from git tag
+- cli w/ docopt
+- use package as module
 
 
 To Do
@@ -85,7 +87,6 @@ To Do
 - lint default cookiecutter template (testing)
 - logging
 - includes, Better Exceptions
-- cli module support
 - precommit
 - testing
 - coverall
