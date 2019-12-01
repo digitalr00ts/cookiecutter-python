@@ -10,6 +10,12 @@ name = "pypi"
 {{ cookiecutter.project_slug }} = {editable = true, path = "."}
 
 [dev-packages]
+bandit = {version = "*", index = "pypi"}
+better_exceptions = {version = "*", index = "pypi"}
+isort = {extras = ["pyproject"], version = "*", index = "pypi"}
+mypy = {version = "*", index = "pypi"}
+notebook = {version = "*", index = "pypi"}
+pylint = {version = "*", index = "pypi"}
 
 [requires]
 # Can define a specific verions of Python.
