@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 # pylint: disable=no-self-use, invalid-name
 
 """Tests for {{ cookiecutter.project_slug }} package."""

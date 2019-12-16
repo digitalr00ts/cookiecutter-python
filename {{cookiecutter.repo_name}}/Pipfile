@@ -4,16 +4,18 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-# Abstract dependancies of this package should be maintained in setup.cfg.
-# Concrete dependancies should be defined here.
-# see, https://packaging.python.org/discussions/install-requires-vs-requirements/
 {{ cookiecutter.project_slug }} = {editable = true, path = "."}
 
 [dev-packages]
+better_exceptions = {version="*", index="pypi"}
+isort = {extras = ["pyproject"], version = "*", index="pypi"}
+pylint = {version="*", index="pypi"}
+notebook = {version="*", index="pypi"}
+#nteract_on_jupyter = {version = "*", index = "pypi"}
 
 [requires]
-# Can define a specific verions of Python.
 
 [scripts]
-build = "python setup.py sdist bdist_wheel"
-publish = "twine upload -r testpypi dist/*"
+install = "pipenv install --dev --skip-lock"
+notebook = "jupyter-notebook"
+#notebook = "jupyter-nteract"

@@ -1,26 +1,47 @@
-dist: xenial
+---
 language: python
-matrix:
-  include:
-  - python: 3.5
-    env: TOXENV=py35
-  - python: 3.6
-    env: TOXENV=py36
-  - python: 3.7
-    env: TOXENV=py37
-  - python: 3.8-dev
-    env: TOXENV=py38-dev
-  - python: pypy3.5
-    env: TOXENV=pypy35
-  - python: 3.7
-    env: TOXENV=style
-  - python: 3.7
-    env: TOXENV=lint
-  - python: 3.7
-    env: TOXENV=type
-  - python: 3.7
-    env: TOXENV=security
-  - python: 3.7
-    env: TOXENV=pkg
-install: pip install 'tox == 3.7.0'
-script: tox --skip-missing-interpreters false
+group: travis_latest
+cache: pip
+python:
+    - 3.8
+env:
+    global:
+        - TOX_TESTENV_PASSENV='TRAVIS TRAVIS_*'
+        - TOX_SKIP_MISSING_INTERPRETERS=False
+        - COVERALLS_SERVICE_NAME=travis-ci
+jobs:
+    include:
+        - env: TOXENV=lint
+        - env: TOXENV=security
+        - env: TOXENV=pkg
+        - env: TOXENV=style
+        - python: 3.5
+          env: TOXENV=py35-coveralls
+            # env: TOXENV=py35
+        - python: 3.6
+            # env: TOXENV=py36-coveralls
+          env: TOXENV=py36
+        - python: 3.7
+            # env: TOXENV=py37-coveralls
+          env: TOXENV=py37
+        - python: 3.8
+            # env: TOXENV=py38-coveralls
+          env: TOXENV=py38
+        - python: pypy3.5
+          env: TOXENV=pypy35
+        - python: pypy3.6-7.1.1
+          env: TOXENV=pypy36
+        - python: "nightly"
+          env: TOXENV=py3
+    allow_failures:
+        - python: "nightly"
+        - env: TOXENV=security
+        - env: TOXENV=style
+    fast_finish: true
+install: pip3 install 'tox < 3.15'
+script:
+    - tox
+notifications:
+    email:
+        on_success: change
+        on_failure: change  # `always` will be the setting once code changes slow down
