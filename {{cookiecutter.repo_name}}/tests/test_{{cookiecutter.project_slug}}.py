@@ -4,9 +4,10 @@
 
 """Tests for {{ cookiecutter.project_slug }} package."""
 
-# import pytest
+import pytest
 
 # import better_exceptions
+
 import {{ cookiecutter.project_slug }}
 
 
@@ -20,3 +21,4 @@ class Test{{ cookiecutter.project_slug|title }}(unittest.TestCase):
       """Test run"""
       # Assert false because no tests have actually been implemented.
       assert False
+
