@@ -39,7 +39,7 @@ Features
   - vscode
   - InteliJ
 
-- License (LGPL)
+- License (Apache 2.0)
 - Python Packaging
 - Readme
 - Pipfile
