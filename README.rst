@@ -1,7 +1,11 @@
 cookiecutter-python
 ===================
 
-A Cookiecutter_ template for Python 3.5+ projects
+.. image:: https://github.com/digitalr00ts/cookiecutter-python/workflows/CI/badge.svg?branch=master
+     :target: https://github.com/digitalr00ts/cookiecutter-python/actions?workflow=CI
+     :alt: CI Status
+
+A Cookiecutter_ template for Python 3.6+ projects
 
 .. _cookiecutter: https://github.com/audreyr/cookiecutter
 
