@@ -1,8 +1,8 @@
 cookiecutter-python
 ===================
 
-.. image:: https://github.com/digitalr00ts/cookiecutter-python/workflows/CI/badge.svg?branch=master
-     :target: https://github.com/digitalr00ts/cookiecutter-python/actions?workflow=CI
+.. image:: https://github.com/digitalr00ts/cookiecutter-python/workflows/Tests/badge.svg?branch=master
+     :target: https://github.com/digitalr00ts/cookiecutter-python/actions?workflow=Tests
      :alt: CI Status
 
 A Cookiecutter_ template for Python 3.6+ projects
