@@ -1,7 +1,11 @@
 #!/bin/sh
 
 git init
-git add .
-git commit --message='cookiecutter generated'
+###
+# Breaks CI
+###
+# Todo: Create empty inital commit
+# git add .
+# git commit --message='cookiecutter generated'
 # Lightweight placeholder tag
-git tag {{ cookiecutter.version }}
+# git tag {{ cookiecutter.version }}
