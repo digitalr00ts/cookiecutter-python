@@ -1,21 +1,9 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
-    Use setup.cfg to configure your project.
+Shim to enable editable installs.
+Currently there is not a standard for editable installs. It is in discussion, 
+https://discuss.python.org/t/specification-of-editable-installation/1564/40.
 """
 
-import sys
-
-from pkg_resources import VersionConflict, require
 from setuptools import setup
 
-# Check for minimal version of setuptools
-SETUPTOOLS_VER = "30.5.0"
-
-try:
-    require("setuptools>=" + SETUPTOOLS_VER)
-except VersionConflict:
-    print("Error: version of setuptools is too old (<%s)!" % SETUPTOOLS_VER)
-    sys.exit(1)
-
-setup(use_scm_version=True)
+setup()

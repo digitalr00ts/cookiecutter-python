@@ -1,6 +1,5 @@
 [build-system]
-#requires = ["setuptools>=40.5.0", "wheel", "setuptools_scm[toml]>=3.4"]
-requires = ["setuptools>=40.5.0", "wheel", "git+https://github.com/pypa/setuptools_scm.git#egg=setuptools_scm[toml]"]
+requires = ["setuptools>=42", "wheel", "setuptools_scm[toml]>=3.4"]
 build-backend = "setuptools.build_meta"
 
 [tool.black]
@@ -24,4 +23,3 @@ default_section = 'THIRDPARTY'
 known_first_party = {{ cookiecutter.project_name }}
 
 [tools.setuptools_scm]
-use_scm_version = true
