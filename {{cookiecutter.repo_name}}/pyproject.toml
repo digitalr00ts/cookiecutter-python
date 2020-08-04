@@ -20,6 +20,6 @@ lines_between_types = 0
 multi_line_output = 3
 not_skip = '__init__.py'
 default_section = 'THIRDPARTY'
-known_first_party = {{ cookiecutter.project_name }}
+known_first_party = '{{ cookiecutter.project_slug }}'
 
 [tools.setuptools_scm]
