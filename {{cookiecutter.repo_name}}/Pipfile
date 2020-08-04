@@ -25,3 +25,4 @@ pytest-cov = {version = "*", index = "pypi"}
 [scripts]
 build = "python setup.py sdist bdist_wheel"
 publish = "twine upload -r testpypi dist/*"
+venv = "pipenv install --dev --skip-lock"
