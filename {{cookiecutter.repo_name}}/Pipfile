@@ -16,6 +16,8 @@ isort = {extras = ["pyproject"], version = "*", index = "pypi"}
 mypy = {version = "*", index = "pypi"}
 notebook = {version = "*", index = "pypi"}
 pylint = {version = "*", index = "pypi"}
+pytest = {version = "*", index = "pypi"}
+pytest-cov = {version = "*", index = "pypi"}
 
 [requires]
 # Can define a specific verions of Python.
