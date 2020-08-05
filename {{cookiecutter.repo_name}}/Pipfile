@@ -10,16 +10,15 @@ name = "pypi"
 {{ cookiecutter.project_slug }} = {editable = true, path = "."}
 
 [dev-packages]
+{{ cookiecutter.project_slug }} = {editable = true, extras = ["testing"], path = "."}
 bandit = {version = "*", index = "pypi"}
 better_exceptions = {version = "*", index = "pypi"}
 mypy = {version = "*", index = "pypi"}
 notebook = {version = "*", index = "pypi"}
 pylint = {version = "*", index = "pypi"}
-pytest = {version = "*", index = "pypi"}
-pytest-cov = {version = "*", index = "pypi"}
 
 [requires]
-# Can define a specific verions of Python.
+# Can a specific verions of Python.
 
 [scripts]
 build = "python setup.py sdist bdist_wheel"
