@@ -22,4 +22,9 @@ not_skip = '__init__.py'
 default_section = 'THIRDPARTY'
 known_first_party = '{{ cookiecutter.project_slug }}'
 
+[tool.pytest.ini_options]
+minversion = "6.0.1"
+addopts = "--verbosity=2 --cov-report=term --cov-report=html --cov-report=xml --cov={{ cookiecutter.project_slug }}"
+testpaths = [ "tests" ]
+
 [tools.setuptools_scm]
