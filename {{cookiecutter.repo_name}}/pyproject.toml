@@ -25,6 +25,39 @@ not_skip = '__init__.py'
 default_section = 'THIRDPARTY'
 known_first_party = '{{ cookiecutter.project_slug }}'
 
+[tool.pylint]
+    [tool.pylint.master]
+    jobs = 0
+    persistent = 'no'
+
+    [tool.pylint.messages_control]
+    enable = [
+        'F',  # Fatal
+        'E',  # Error
+        'W',  # Warning
+        'R',  # Refactor
+        'C',  # Convention
+        'I',  # Internal?
+    ]
+    disable= [
+        'fixme',
+        'bad-continuation',  # TODO: this check is removed in pylint 2.6
+        'no-absolute-import',
+        'spelling',
+        'suppressed-message',
+        'locally-disabled',
+    ]
+
+    [tool.pylint.reports]
+    output-format = 'colorized'
+    score = 'no'
+
+    [tool.pylint.format]
+    single-line-if-stmt = 'yes'
+
+    [tool.pylint.logging]
+    logging-format-style='old'  # TODO: Update code to 'new' style
+
 [tool.pytest.ini_options]
 minversion = "6.0.1"
 addopts = "--verbosity=2 --cov-report=term --cov-report=html --cov-report=xml --cov"
