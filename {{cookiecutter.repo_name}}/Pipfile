@@ -10,12 +10,10 @@ name = "pypi"
 {{ cookiecutter.project_slug }} = {editable = true, path = "."}
 
 [dev-packages]
-{{ cookiecutter.project_slug }} = {editable = true, extras = ["testing"], path = "."}
-bandit = {version = "*", index = "pypi"}
+{{ cookiecutter.project_slug }} = {editable = true, extras = [ "linting"git , "testing" ], path = "."}
 better_exceptions = {version = "*", index = "pypi"}
 mypy = {version = "*", index = "pypi"}
 notebook = {version = "*", index = "pypi"}
-pylint = {version = "*", index = "pypi"}
 
 [requires]
 # Can a specific verions of Python.
