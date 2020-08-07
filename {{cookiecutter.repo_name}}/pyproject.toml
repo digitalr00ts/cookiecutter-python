@@ -82,8 +82,8 @@ known_first_party = '{{ cookiecutter.project_slug }}'
     logging-format-style='old'  # TODO: Update code to 'new' style
 
 [tool.pytest.ini_options]
-minversion = "6.0.1"
-addopts = "--verbosity=2 --cov-report=term --cov-report=html --cov-report=xml --cov"
-testpaths = [ "tests" ]
+minversion = '6.0.1'
+addopts = '--verbosity=2 --cov-report=term --cov-report=html --cov-report=xml --cov'
+testpaths = [ 'tests' ]
 
 [tool.setuptools_scm]
