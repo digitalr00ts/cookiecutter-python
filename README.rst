@@ -83,18 +83,13 @@ To Do
   - Gitea/Gogs ???
 
 - exceptions
-- CI/CD
-
-  - Jenkins
-  - Gitlab CI
-
+- CI/CD: Jenkins file
 - License Options
 - testing
 
   - hypothosis
   - pytest-bdd
 
-- lint default cookiecutter template (testing)
 - logging
 - includes, Better Exceptions
 - precommit
