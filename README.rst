@@ -58,6 +58,12 @@ Features
 To Do
 -----
 
+- [ ] Add LGTM.com
+- [ ] Add `nitpick`
+- [ ] Cleanup this readme
+- [ ] finish config for flake8/flakehell
+- [ ] add Github Actions
+
 - Add license options to template
 
    - Creative Commons Attribution
