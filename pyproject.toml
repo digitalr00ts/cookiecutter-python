@@ -7,4 +7,4 @@ minversion = "6.0.1"
 addopts = "--numprocesses auto --verbosity=2"
 testpaths = [ "tests" ]
 
-[tools.setuptools_scm]
+[tool.setuptools_scm]
