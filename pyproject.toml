@@ -4,7 +4,8 @@ build-backend = 'setuptools.build_meta'
 
 [tool.pytest.ini_options]
 minversion = '6.0.1'
-addopts = '--numprocesses auto --verbosity=2'
+addopts = '--verbosity=2 --strict-markers --numprocesses auto'
 testpaths = [ 'tests' ]
+required_plugins = 'pytest-xdist>=1.0.0'
 
 [tool.setuptools_scm]
