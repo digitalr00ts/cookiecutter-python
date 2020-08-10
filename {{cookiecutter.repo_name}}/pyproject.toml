@@ -60,7 +60,7 @@ known_first_party = '{{ cookiecutter.project_slug }}'
         'W',  # Warning
         'R',  # Refactor
         'C',  # Convention
-        'I',  # Internal?
+        'I',  # Informational
     ]
     disable= [
         'fixme',
