@@ -51,7 +51,6 @@ known_first_party = '{{ cookiecutter.project_slug }}'
 [tool.pylint]
     [tool.pylint.master]
     jobs = 0
-    persistent = 'no'
     load-plugins = [
         'pylint.extensions.broad_try_clause',
         'pylint.extensions.emptystring',
@@ -64,6 +63,7 @@ known_first_party = '{{ cookiecutter.project_slug }}'
         'pylint.extensions.overlapping_exceptions',
         'pylint.extensions.docparams',
     ]
+    persistent = 'no'
 
     [tool.pylint.messages_control]
     enable = [
@@ -84,6 +84,7 @@ known_first_party = '{{ cookiecutter.project_slug }}'
     ]
 
     [tool.pylint.reports]
+    msg-template = '{path}:{line}: [{msg_id}({symbol}), {obj}] {msg}'
     output-format = 'colorized'
     score = 'no'
 
