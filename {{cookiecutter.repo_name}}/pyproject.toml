@@ -52,6 +52,18 @@ known_first_party = '{{ cookiecutter.project_slug }}'
     [tool.pylint.master]
     jobs = 0
     persistent = 'no'
+    load-plugins = [
+        'pylint.extensions.broad_try_clause',
+        'pylint.extensions.emptystring',
+        'pylint.extensions.comparetozero',
+        'pylint.extensions.bad_builtin',
+        'pylint.extensions.mccabe',
+        'pylint.extensions.docstyle',
+        'pylint.extensions.check_elif',
+        'pylint.extensions.redefined_variable_type',
+        'pylint.extensions.overlapping_exceptions',
+        'pylint.extensions.docparams',
+    ]
 
     [tool.pylint.messages_control]
     enable = [
