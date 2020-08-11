@@ -1,11 +1,9 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 git init
-###
-# Breaks CI
-###
-# Todo: Create empty inital commit
-# git add .
-# git commit --message='cookiecutter generated'
-# Lightweight placeholder tag
-# git tag {{ cookiecutter.version }}
+git config user.name || git config --add user.name "{{ cookiecutter.full_name }}"
+git config user.email || git config --add user.email "{{ cookiecutter.email }}"
+git commit --allow-empty -m '🎉 initial commit'
+git add .
+git commit --message='✨ feat: initial project scaffolding'
+git tag {{ cookiecutter.version }}
