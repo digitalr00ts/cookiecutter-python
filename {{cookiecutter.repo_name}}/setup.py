@@ -1,4 +1,4 @@
-""" Shim to enable editable install and wheel building. """
+"""Shim to enable editable installs."""
 
 from setuptools import setup
 
