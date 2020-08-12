@@ -22,6 +22,7 @@ jobs:
         python -m pip install tox
     - name: Run Tox
       env:
+        PYTEST_XDIST_WORKER_COUNT: 2
         TOX_SKIP_MISSING_INTERPRETERS: false
       run: |
         tox -e py
