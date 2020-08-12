@@ -1,4 +1,4 @@
-name: Tests
+name: Fail OK
 
 on: [push, pull_request]
 
@@ -9,7 +9,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
-        python-version: [3.6, 3.7, 3.8, 3.9-dev, pypy3]
+        python-version: [3-dev, pypy3-dev]
 
     steps:
     - uses: actions/checkout@v2
@@ -22,7 +22,8 @@ jobs:
         python -m pip install tox
     - name: Run Tox
       env:
-        PYTEST_XDIST_WORKER_COUNT: 2
         TOX_SKIP_MISSING_INTERPRETERS: false
       run: |
         tox -e py
+
+      continue-on-error: true
