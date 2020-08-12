@@ -53,7 +53,7 @@ master_doc = "index"
 rst_epilog = "\n".join(
     [
         "\nBuild: |release|\n",
-        ".. _{{ cookiecutter.project_name }}: https://homepage",
+        f".. _{{ cookiecutter.project_name }}: {metadata_.get('url}')",
         f".. |project| replace:: {project}",
     ]
 )
