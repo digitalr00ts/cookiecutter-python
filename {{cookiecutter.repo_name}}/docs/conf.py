@@ -6,12 +6,17 @@
 
 # TODO: Change paths from str to pathlib.Path
 
-import importlib.metadata
+import importlib
 import re
 from datetime import datetime
 
 import sphinx_rtd_theme
 
+
+# importlib.metadata is implemented in Python 3.8
+# Previous versions require the backport, https://pypi.org/project/importlib-metadata/
+if not hasattr(importlib, "metadata"):
+    setattr(importlib, "metadata", importlib.import_module("importlib_metadata"))
 
 # -- Project information -----------------------------------------------------
 
