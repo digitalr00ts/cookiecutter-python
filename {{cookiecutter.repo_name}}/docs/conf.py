@@ -53,7 +53,7 @@ master_doc = "index"
 rst_epilog = "\n".join(
     [
         "\nBuild: |release|\n",
-        ".. _Cloud Custodian: https://cloudcustodian.io/",
+        ".. _{{ cookiecutter.project_name }}: https://homepage",
         f".. |project| replace:: {project}",
     ]
 )
