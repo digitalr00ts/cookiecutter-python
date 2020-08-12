@@ -11,9 +11,18 @@ Installation
 
 Usage
 =====
+
+CLI
+---
 .. code-block:: console
 
    {{ cookiecutter.project_slug }} --help
+
+Module
+------
+.. code-block:: console
+
+   python3 -m {{ cookiecutter.project_slug }} --help
 
 License
 =======
