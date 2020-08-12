@@ -16,7 +16,7 @@ mypy = {version = "*", index = "pypi"}
 notebook = {version = "*", index = "pypi"}
 
 [requires]
-# Can a specific verions of Python.
+# Pin a specific verions of Python.
 
 [scripts]
 build = "python setup.py sdist bdist_wheel"
