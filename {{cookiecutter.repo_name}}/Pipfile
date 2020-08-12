@@ -10,13 +10,13 @@ name = "pypi"
 {{ cookiecutter.project_slug }} = {editable = true, path = "."}
 
 [dev-packages]
-{{ cookiecutter.project_slug }} = {editable = true, extras = [ "linting", "testing" ], path = "."}
+{{ cookiecutter.project_slug }} = {editable = true, extras = ["docs", "linting", "testing"], path = "."}
 better_exceptions = {version = "*", index = "pypi"}
 mypy = {version = "*", index = "pypi"}
 notebook = {version = "*", index = "pypi"}
 
 [requires]
-# Pin a specific verions of Python.
+# Can a specific verions of Python.
 
 [scripts]
 build = "python setup.py sdist bdist_wheel"
