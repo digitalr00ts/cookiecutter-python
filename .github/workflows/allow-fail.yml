@@ -1,0 +1,29 @@
+name: Allow Fail
+
+on: [push, pull_request]
+
+jobs:
+  pytest-nightly:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        python-version: [3.9, 3.10]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: deadsnakes/action@v1.0.0
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install Tox
+      run: |
+        python -m pip install tox
+    - name: Run Tox
+      env:
+        TOX_SKIP_MISSING_INTERPRETERS: false
+      run: |
+        tox -e py
+
+      continue-on-error: true
