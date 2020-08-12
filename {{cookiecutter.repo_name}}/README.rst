@@ -1,6 +1,10 @@
 {% for _ in cookiecutter.project_name %}={% endfor %}
 {{ cookiecutter.project_name }}
 {% for _ in cookiecutter.project_name %}={% endfor %}
+.. image:: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/workflows/Tests/badge.svg?branch=master
+     :target: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/actions?workflow=Tests
+     :alt: CI Status
+
 {{ cookiecutter.description }}
 
 Installation
