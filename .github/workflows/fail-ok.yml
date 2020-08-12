@@ -3,13 +3,13 @@ name: Fail OK
 on: [push, pull_request]
 
 jobs:
-  pytest:
+  pytest-macos:
     runs-on: ${{ matrix.os }}
 
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
-        python-version: [3.10-dev, pypy3-dev]
+        os: [macos-latest]
+        python-version: [3.8-dev, 3.9-dev]
 
     steps:
     - uses: actions/checkout@v2
@@ -28,13 +28,13 @@ jobs:
 
       continue-on-error: true
 
-  pytest2:
+  pytest-nightly:
     runs-on: ${{ matrix.os }}
 
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
-        python-version: [3.9, 3.10, 3]
+        python-version: [3.9, 3.10]
 
     steps:
     - uses: actions/checkout@v2
