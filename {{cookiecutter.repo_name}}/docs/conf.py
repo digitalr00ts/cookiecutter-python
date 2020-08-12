@@ -4,6 +4,8 @@
 # list see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
+# TODO: Change paths from str to pathlib.Path
+
 import importlib.metadata
 import re
 from datetime import datetime
