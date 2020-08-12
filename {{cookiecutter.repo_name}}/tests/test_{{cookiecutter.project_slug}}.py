@@ -1,23 +1,15 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# pylint: disable=no-self-use, invalid-name
-
+# pylint: disable=no-self-use, invalid-name, too-few-public-methods
 """Tests for {{ cookiecutter.project_slug }} package."""
 
-import pytest
-
-# import better_exceptions
+import pytest  # pytest: disable=unused-import
 
 import {{ cookiecutter.project_slug }}
-
-
-# better_exceptions.hook()
 
 
 class Test{{ cookiecutter.project_slug|title }}():
     """Tests for `{{ cookiecutter.project_slug }}` package."""
 
     def test_000_run(self):
-      """Test run"""
-      # Assert false because no tests have actually been implemented.
-      assert False
+        """Test run"""
+        # Assert false because no tests have actually been implemented.
+        assert False
