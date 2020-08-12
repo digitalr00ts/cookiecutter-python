@@ -1,12 +1,10 @@
-""" __main__ to load package {{ cookiecutter.project_name }} as module """
+"""Module interface for {{ cookiecutter.project_name }}"""
 import logging
 import sys
 
 
 def main():
-    """
-    Main entry point.
-    """
+    """Module entry point"""
     module_args = sys.argv[1:]
     logging.debug("Module arguments received: %s", module_args)
     {{ cookiecutter.project_slug }}.cli.main()
