@@ -1,12 +1,4 @@
-"""{{ cookiecutter.project_name }}
-{{ cookiecutter.description }}
-Usage:
-  {{ cookiecutter.project_slug }} (-h | --help)
-  {{ cookiecutter.project_slug }} (-v | --version)
-Options:
-  -v --version     Show version
-  -h --help     Show this screen
-"""
+"""{{ cookiecutter.project_name }} CLI"""
 
 import argparse
 import logging
