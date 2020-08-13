@@ -1,5 +1,6 @@
 *      text=auto
 .*     text eol=LF
+*.cfg  text eol=LF
 *.css  text eol=LF
 *.html text eol=LF
 *.ini  text eol=LF
