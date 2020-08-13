@@ -1,8 +1,8 @@
-""" Exceptions module """
+"""Exceptions module."""
 
 
 class {{ cookiecutter.project_name.title().replace(' ', '').replace('-', '').replace('_','') }}Error(Exception):
-    """Base Exception for {{ cookiecutter.project_name }}"""
+    """Base Exception for {{ cookiecutter.project_name }}."""
 
     fmt = "{}"
 

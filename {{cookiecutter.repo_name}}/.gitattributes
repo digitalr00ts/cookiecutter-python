@@ -14,3 +14,4 @@
 *.txt  text eol=LF
 *.yml  text eol=LF
 *.yaml text eol=LF
+*.xml  text eol=LF

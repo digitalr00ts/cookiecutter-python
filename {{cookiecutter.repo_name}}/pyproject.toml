@@ -15,7 +15,7 @@ target-version = ['py36','py37','py38']
     [tool.coverage.report]
     precision = 2
     show_missing = true
-    
+
 [tool.flakehell.plugins]
 dlint = [ '+*' ]
 flake8-bandit = [ '+*' ]
@@ -37,12 +37,14 @@ pep8-naming = [ '+*' ]
 # pycodestyle = [ '+*' ]
 # pyflakes = [ '+*' ]
 pylint = [ '+*' ]
-wemake-python-styleguide = [ '+*', '-WPS305' ]
+wemake-python-styleguide = [ '+*', '-WPS305', '-WPS306 ]
 
 [tool.isort]
 atomic = true
+include_trailing_comma = true
 lines_after_imports = 2
 lines_between_types = 0
+line_length = 98
 multi_line_output = 3
 not_skip = '__init__.py'
 default_section = 'THIRDPARTY'
@@ -63,6 +65,7 @@ known_first_party = '{{ cookiecutter.project_slug }}'
         'pylint.extensions.overlapping_exceptions',
         'pylint.extensions.docparams',
     ]
+    max-line-length = 120
     persistent = 'no'
 
     [tool.pylint.messages_control]

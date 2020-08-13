@@ -1,4 +1,5 @@
 """Configuration file for the Sphinx documentation builder.
+
 Documentation:
 https://www.sphinx-doc.org/en/master/usage/configuration.html
 """
@@ -9,7 +10,7 @@ from datetime import datetime
 from importlib import import_module
 from pathlib import Path
 
-import sphinx_rtd_theme
+import sphinx_rtd_theme  # pylint: disable=unused-import
 
 
 # importlib.metadata is implemented in Python 3.8
