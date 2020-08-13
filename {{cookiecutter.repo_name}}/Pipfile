@@ -10,7 +10,7 @@ name = "pypi"
 {{ cookiecutter.project_slug }} = {editable = true, path = "."}
 
 [dev-packages]
-{{ cookiecutter.project_slug }} = {editable = true, extras = ["docs", "linting", "testing"], path = "."}
+{{ cookiecutter.project_slug }} = {editable = true, extras = ["docs", "lint", "test"], path = "."}
 better_exceptions = {version = "*", index = "pypi"}
 mypy = {version = "*", index = "pypi"}
 notebook = {version = "*", index = "pypi"}
