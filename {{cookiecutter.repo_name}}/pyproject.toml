@@ -7,10 +7,12 @@ line-length = 98
 target-version = ['py36','py37','py38']
 
 [tool.coverage]
+    [tool.coverage.path]
+    source = [ "src", "*/site-packages" ]
+
     [tool.coverage.run]
     branch = true
-    source = [ "src/" ]
-    omit = [ "tests/*" ]
+    source = [ "src", "test" ]
 
     [tool.coverage.report]
     precision = 2
