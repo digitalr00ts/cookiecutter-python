@@ -7,12 +7,8 @@ line-length = 98
 target-version = ['py36','py37','py38']
 
 [tool.coverage]
-    [tool.coverage.path]
-    source = [ "src", "*/site-packages" ]
-
     [tool.coverage.run]
     branch = true
-    source = [ "src", "test" ]
 
     [tool.coverage.report]
     precision = 2
@@ -101,13 +97,13 @@ known_first_party = '{{ cookiecutter.project_slug }}'
 
 [tool.pytest.ini_options]
 minversion = '6.0.1'
-addopts = '--verbosity=2 -rfp --strict-markers --cov-report=term --cov-report=html --cov-report=xml --cov'
+addopts = '--verbosity=2 -rfp --strict-markers --cov-report=term --cov-report=html --cov-report=xml --cov {{ cookiecutter.project_slug }}'
 testpaths = [ 'tests' ]
 log_cli = true
 log_level = 'DEBUG'
 log_cli_level = 'DEBUG'
 log_file_level = 'DEBUG'
 junit_family = 'xunit2'
-# required_plugins = 'pytest-xdist>=1.0'
+# required_plugins = 'pytest-xdist >=1.0,<2'
 
 [tool.setuptools_scm]
