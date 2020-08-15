@@ -3,6 +3,7 @@ name: Tests
 on: [push, pull_request]
 
 env:
+  PIP_DISABLE_PIP_VERSION_CHECK: 1
   TOX_SKIP_MISSING_INTERPRETERS: false
   TOXENV: {{ '${{ github.job }}' }}
 
