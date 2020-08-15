@@ -1,0 +1,24 @@
+name: Allow Fail
+
+on: [push, pull_request]
+
+env:
+  TOX_SKIP_MISSING_INTERPRETERS: false
+  TOXENV: {{ '${{ github.job }}' }}
+
+jobs:
+  py:
+    name: Pytest
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.9-dev', '3.10-dev']
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python {{ '${{ matrix.python-version }}' }}
+      uses: deadsnakes/action@v1.0.0
+      with:
+        python-version: {{ '${{ matrix.python-version }}' }}
+    - run: python -m pip install tox
+    - run: tox
