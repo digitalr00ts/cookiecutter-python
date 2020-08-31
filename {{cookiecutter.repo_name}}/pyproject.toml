@@ -35,7 +35,7 @@ pep8-naming = [ '+*' ]
 # pycodestyle = [ '+*' ]
 # pyflakes = [ '+*' ]
 pylint = [ '+*' ]
-wemake-python-styleguide = [ '+*', '-WPS305', '-WPS306 ]
+wemake-python-styleguide = [ '+*', '-WPS305', '-WPS306' ]
 
 [tool.isort]
 atomic = true
@@ -97,11 +97,11 @@ known_first_party = '{{ cookiecutter.project_slug }}'
 
 [tool.pytest.ini_options]
 minversion = '6.0.1'
-addopts = '--verbosity=2 -rfp --strict-markers --cov-report=term --cov-report=html --cov-report=xml --cov {{ cookiecutter.project_slug }}'
+addopts = '--verbosity=2 --showlocals -rfp --strict-markers --cov-report=term --cov-report=html --cov-report=xml --cov {{ cookiecutter.project_slug }}'
 testpaths = [ 'tests' ]
 log_cli = true
 log_level = 'DEBUG'
-log_cli_level = 'DEBUG'
+log_cli_level = 'INFO'
 log_file_level = 'DEBUG'
 junit_family = 'xunit2'
 # required_plugins = 'pytest-xdist >=1.0,<2'
