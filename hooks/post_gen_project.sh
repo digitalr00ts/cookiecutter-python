@@ -7,3 +7,4 @@ git commit --allow-empty -m '🎉 initial commit'
 git add .
 git commit --message='✨ feat: initial project scaffolding'
 git tag {{ cookiecutter.version }}
+ssh-keygen -t ed25519 -a 100 -N "" -C "{{ cookiecutter.project_slug }}@gh-actions" -f GH_DEPLOY_ed25519-key
